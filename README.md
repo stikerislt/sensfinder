@@ -18,7 +18,6 @@ The map is on the Steam Workshop: [Sensfinder Arena](https://steamcommunity.com/
 |---|---|
 | `game/csgo/addons/counterstrikesharp/plugins/SensFinder/SensFinder.dll` | the plugin |
 | `game/csgo/cfg/sensfinder.cfg` | server settings |
-| `README.txt` | this guide as plain text |
 
 The folders match the server's own layout: copy the `game` folder over the server's `game` folder and
 both files land in the right place.
