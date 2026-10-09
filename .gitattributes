@@ -1,0 +1,2 @@
+# Store every file byte-for-byte, so the SHA-256 checksums in README.txt match the downloaded files.
+* -text
