@@ -1,6 +1,6 @@
 <a href="https://buymeacoffee.com/xaizen"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-# SensFinder server - version 0.5.17
+# SensFinder server - version 0.5.18
 
 A Counter-Strike 2 practice server that finds the mouse sensitivity you aim best with.
 Players join, type `!search` in chat, play about 30 minutes of short aim tasks against bots, and get a
@@ -83,7 +83,7 @@ After every CS2 update you may need newer Metamod/CounterStrikeSharp builds - se
 | Command | Expected |
 |---|---|
 | `meta list` | lists CounterStrikeSharp |
-| `css_plugins list` | `"SensFinder" (0.5.17)` as LOADED |
+| `css_plugins list` | `"SensFinder" (0.5.18)` as LOADED |
 | `css_sf_lanes` | second line: `player cap: 5 humans (15 slots, up to 10 bots)` and 10 bots "parked" |
 
 In `addons/counterstrikesharp/logs/` the plugin writes one line per map:
@@ -109,7 +109,7 @@ walk around with guns and fight.
    start by themselves when it matches.
 5. At the end you get the verdict and a range in chat. Validate it in deathmatch.
 
-Other chat commands: `!help`, `!menu`, `!sens_stop` (stop), `!solo mflick` (practice one task, nothing
+Other chat commands: `!resume` (continue a run cut short by a disconnect, crash or server restart - progress is saved after every finished block), `!help`, `!menu`, `!sens_stop` (stop), `!solo mflick` (practice one task, nothing
 recorded), `!sf_report` (re-show your stored result).
 
 Each player's results are saved on the server in
@@ -155,5 +155,5 @@ noclip/god/give.
 
 | File | SHA-256 |
 |---|---|
-| `SensFinder.dll` | `276A9771374F4290CFBC4D7E806C39B7F89C2299D9F99F5FE7A5030260C06D1F` |
-| `sensfinder.cfg` | `81C6885765B76F588788CC277D44F24073240C60870C11AA4483E05E220629F7` |
+| `SensFinder.dll` | `042BEE7C5DF390C1A1900C9C1889E927F1FB45584D036AB7B6D211DAF070AC6A` |
+| `sensfinder.cfg` | `EF6CCA3F01EE06593FD98B18B9A76FF3E15A25F32AD95F40E2805F1AFA83E806` |
