@@ -1,11 +1,13 @@
 <a href="https://buymeacoffee.com/xaizen"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-# SensFinder server - version 0.5.18
+# SensFinder server - version 0.5.19
 
 A Counter-Strike 2 practice server that finds the mouse sensitivity you aim best with.
 Players join, type `!search` in chat, play about 30 minutes of short aim tasks against bots, and get a
 verdict (CHANGE / KEEP / INCONCLUSIVE) with a sensitivity range. Up to 5 players at once, each in their
 own sealed room.
+
+What changed in each version: [CHANGELOG.md](CHANGELOG.md).
 
 This repository contains only the SensFinder parts. You also need a CS2 dedicated server with
 Metamod:Source and CounterStrikeSharp installed (steps 1-2 below).
@@ -83,7 +85,8 @@ After every CS2 update you may need newer Metamod/CounterStrikeSharp builds - se
 | Command | Expected |
 |---|---|
 | `meta list` | lists CounterStrikeSharp |
-| `css_plugins list` | `"SensFinder" (0.5.18)` as LOADED |
+| `css_plugins list` | `"SensFinder" (0.5.19)` as LOADED |
+| `mp_respawn_immunitytime` | `-1` (no spawn protection - a protected bot cannot be hit) |
 | `css_sf_lanes` | second line: `player cap: 5 humans (15 slots, up to 10 bots)` and 10 bots "parked" |
 
 In `addons/counterstrikesharp/logs/` the plugin writes one line per map:
@@ -108,6 +111,8 @@ walk around with guns and fight.
    The server cannot change your sensitivity itself - this line sets it AND tells the plugin. Trials
    start by themselves when it matches.
 5. At the end you get the verdict and a range in chat. Validate it in deathmatch.
+6. After 3 complete runs: `!finetune` - one more run with every test value inside your range, then ONE
+   concrete sensitivity: the best estimate from all your runs combined (your current one can win).
 
 Other chat commands: `!resume` (continue a run cut short by a disconnect, crash or server restart - progress is saved after every finished block), `!help`, `!menu`, `!sens_stop` (stop), `!solo mflick` (practice one task, nothing
 recorded), `!sf_report` (re-show your stored result).
@@ -155,5 +160,5 @@ noclip/god/give.
 
 | File | SHA-256 |
 |---|---|
-| `SensFinder.dll` | `042BEE7C5DF390C1A1900C9C1889E927F1FB45584D036AB7B6D211DAF070AC6A` |
-| `sensfinder.cfg` | `EF6CCA3F01EE06593FD98B18B9A76FF3E15A25F32AD95F40E2805F1AFA83E806` |
+| `SensFinder.dll` | `54905C91BE4A2CCC9CF43912557357FE0251EFA849056F56C85AEEE0E869DCD5` |
+| `sensfinder.cfg` | `9E3AA2AF37B6E405DE99F9CE5F4D54AD536C86EB5058A76A6EBB90C02B77BB0C` |
