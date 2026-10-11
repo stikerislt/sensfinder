@@ -1,6 +1,6 @@
 <a href="https://buymeacoffee.com/xaizen"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-yellow.png" alt="Buy Me A Coffee" height="41" width="174"></a>
 
-# SensFinder server - version 0.5.19
+# SensFinder server - version 0.5.20
 
 A Counter-Strike 2 practice server that finds the mouse sensitivity you aim best with.
 Players join, type `!search` in chat, play about 30 minutes of short aim tasks against bots, and get a
@@ -85,7 +85,7 @@ After every CS2 update you may need newer Metamod/CounterStrikeSharp builds - se
 | Command | Expected |
 |---|---|
 | `meta list` | lists CounterStrikeSharp |
-| `css_plugins list` | `"SensFinder" (0.5.19)` as LOADED |
+| `css_plugins list` | `"SensFinder" (0.5.20)` as LOADED |
 | `mp_respawn_immunitytime` | `-1` (no spawn protection - a protected bot cannot be hit) |
 | `css_sf_lanes` | second line: `player cap: 5 humans (15 slots, up to 10 bots)` and 10 bots "parked" |
 
@@ -160,5 +160,5 @@ noclip/god/give.
 
 | File | SHA-256 |
 |---|---|
-| `SensFinder.dll` | `54905C91BE4A2CCC9CF43912557357FE0251EFA849056F56C85AEEE0E869DCD5` |
+| `SensFinder.dll` | `D4EBC7A2AD29A62EC13DC6EB0127BC6281F52E9A04C0A6A60A7A9E9875378DCD` |
 | `sensfinder.cfg` | `9E3AA2AF37B6E405DE99F9CE5F4D54AD536C86EB5058A76A6EBB90C02B77BB0C` |

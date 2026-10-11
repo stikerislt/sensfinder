@@ -2,6 +2,31 @@
 
 Newest first. "Player" = what people on the server notice, "Server" = what server owners need to know.
 
+## 0.5.20
+
+**Fixed**
+- The welcome sign could show two texts on top of each other ("!search to start" and "!resume continues") when
+  a player joined before Steam had identified them. The welcome now waits for that, and the sign is redrawn
+  cleanly.
+- `!resume` is only offered when it will work. A saved run that can no longer be continued (older than 24 hours,
+  or `!setup` changed since) used to be offered on the sign and then refused; chat now says once that it was
+  discarded and why.
+- After a CHANGE result, the next step pointed to `!search`, which does not test the new value. It now says how
+  to switch: `!setup` with the new value, play it for at least 3 days, then the confirm test from `!menu`.
+- The run length shown at the start was too long ("~39 min"); it now matches the real ~30 minutes.
+- `!setup` during a run is refused (it used to change the profile under a run that kept the old values).
+  Changing DPI or sensitivity says when it ends a saved run.
+- Running `!setup` again with the same values no longer restarts the 3-day wait for the confirm test.
+- A positive_control or confirm run picked from `!menu` no longer repeats on every later `!search`; a refused
+  confirm test no longer blocks later searches.
+- `!search` no longer throws away a saved run when the new run cannot be set up.
+
+**Changed**
+- Clearer chat during a run: plain block messages ("Block 3 of 13 at sens 0.85") and the true number of
+  repeats, instead of internal names.
+- After a plugin update, players with a saved run are told it is saved, without "your run stopped" for players
+  who were not playing.
+
 ## 0.5.19
 
 **New**
